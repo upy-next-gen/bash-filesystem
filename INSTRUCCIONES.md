@@ -23,7 +23,7 @@ pwd
 # Reemplaza con TU carpeta (ejemplo: mlopez_1809139)
 cd TU_CARPETA_AQUI
 pwd
-# Debes estar en: .../practica-bash-navegacion/TU_CARPETA
+# Debes estar en: .../bash-filesystem/TU_CARPETA
 ```
 
 ### Paso 3: Crear directorio principal del proyecto
@@ -171,7 +171,7 @@ ls
 
 ### Paso 19: Volver a raíz e ir a pipelines
 ```bash
-cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project/pipelines
+cd ~/bash-filesystem/TU_CARPETA/data-engineering-project/pipelines
 # O también: cd ../../..
 pwd
 # Debes estar en: .../pipelines
@@ -373,7 +373,7 @@ ls
 
 ### Paso 36: Eliminar archivo de backup innecesario
 ```bash
-cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project/data/raw/backup
+cd ~/bash-filesystem/TU_CARPETA/data-engineering-project/data/raw/backup
 ls
 # Debes ver products_backup.csv
 rm products_backup.csv
@@ -383,7 +383,7 @@ ls
 
 ### Paso 37: Intentar borrar directorio no vacío
 ```bash
-cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project/data/raw
+cd ~/bash-filesystem/TU_CARPETA/data-engineering-project/data/raw
 rmdir backup
 # Debe dar error: "Directory not empty"
 # Esto es CORRECTO - el directorio tiene archivos
@@ -402,7 +402,7 @@ ls backup/
 
 ### Paso 39: Ver estructura completa
 ```bash
-cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project
+cd ~/bash-filesystem/TU_CARPETA/data-engineering-project
 tree -L 3
 # O si no tienes tree:
 find . -type d | sort
@@ -488,7 +488,7 @@ Antes de subir tu trabajo, verifica:
 ### Paso 47: Correr tests locales (opcional)
 ```bash
 # Vuelve a la raíz del repositorio
-cd ~/practica-bash-navegacion
+cd ~/bash-filesystem
 
 # Corre el script de tests
 chmod +x test_estructura.sh
@@ -507,7 +507,7 @@ Si hay errores, léelos cuidadosamente y corrige lo que falta.
 
 ### Paso 48: Verificar cambios
 ```bash
-cd ~/practica-bash-navegacion
+cd ~/bash-filesystem
 git status
 # Debes ver tu carpeta en "Untracked files"
 ```
@@ -538,13 +538,10 @@ git push origin estructura-TU-NOMBRE
 
 ### Paso 52: Ir a GitHub y crear PR
 
-1. Ve a tu fork en GitHub: `https://github.com/TU-USUARIO/practica-bash-data-engineering`
+1. Ve al repositorio en GitHub: `https://github.com/upy-next-gen/bash-filesystem`
 2. Verás un banner amarillo: **"estructura-TU-NOMBRE had recent pushes"**
 3. Haz clic en el botón verde **"Compare & pull request"**
-4. Verifica que el PR vaya desde:
-   - **base:** `repo-original/main` 
-   - **compare:** `tu-fork/estructura-TU-NOMBRE`
-5. En el título escribe: `Práctica Bash - [Tu Nombre] - [Matrícula]`
+4. En el título escribe: `Práctica Bash - [Tu Nombre] - [Matrícula]`
 6. En la descripción (opcional) puedes escribir: "Estructura completa de Data Engineering Project"
 7. Haz clic en **"Create pull request"**
 
@@ -580,7 +577,7 @@ Ahora:
 2. **Corregir en tu computadora:**
    ```bash
    # Ve a tu carpeta del proyecto
-   cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project
+   cd ~/bash-filesystem/TU_CARPETA/data-engineering-project
    
    # Crea lo que falta según el error
    # Por ejemplo, si falta "data/raw/customers.csv":
@@ -590,7 +587,7 @@ Ahora:
 3. **Subir la corrección:**
    ```bash
    # Vuelve a la raíz del repo
-   cd ~/practica-bash-navegacion
+   cd ~/bash-filesystem
    
    # Agrega los cambios
    git add .
@@ -629,7 +626,7 @@ find . -name "nombre_archivo"
 cat nombre_archivo
 
 # Volver al inicio del proyecto
-cd ~/practica-bash-navegacion/TU_CARPETA/data-engineering-project
+cd ~/bash-filesystem/TU_CARPETA/data-engineering-project
 
 # Contar directorios
 find . -type d | wc -l

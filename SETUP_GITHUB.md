@@ -22,9 +22,9 @@ Esta guía te ayudará a configurar el repositorio en GitHub para que los tests 
 1. Ve a [GitHub](https://github.com)
 2. Haz clic en el botón **"+"** (arriba derecha) → **"New repository"**
 3. Configura:
-   - **Repository name:** `practica-bash-data-engineering` (o el nombre que prefieras)
+   - **Repository name:** `bash-filesystem` (o el nombre que prefieras)
    - **Description:** "Práctica de navegación en Bash y estructura de proyectos de Data Engineering"
-   - **Visibility:** Public (para que estudiantes puedan hacer fork)
+   - **Visibility:** Public (para que estudiantes puedan clonar)
    - ✅ **Add a README file:** NO (ya tienes uno)
    - ✅ **Add .gitignore:** NO (ya tienes uno)
    - **Choose a license:** MIT (opcional)
@@ -47,8 +47,8 @@ git add .
 # Haz el primer commit
 git commit -m "Initial commit: Configurar práctica de Bash"
 
-# Conecta con tu repositorio en GitHub (reemplaza TU-USUARIO)
-git remote add origin https://github.com/TU-USUARIO/practica-bash-data-engineering.git
+# Conecta con tu repositorio en GitHub (reemplaza upy-next-gen)
+git remote add origin https://github.com/upy-next-gen/bash-filesystem.git
 
 # Renombra la branch a main (si es necesario)
 git branch -M main
@@ -145,16 +145,16 @@ Esto evita que se acepten PRs con tests fallidos.
 
 Comparte el link del repositorio con tus estudiantes:
 ```
-https://github.com/TU-USUARIO/practica-bash-data-engineering
+https://github.com/upy-next-gen/bash-filesystem
 ```
 
 Pídeles que:
-1. Hagan **Fork** del repositorio
+1. **Clonen** el repositorio
 2. Sigan las instrucciones en `README.md`
 
 ### 4.2 Verificar Permisos
 
-Asegúrate de que el repositorio sea **Public** para que los estudiantes puedan hacer fork:
+Asegúrate de que los estudiantes tengan permisos de push al repositorio:
 
 1. Ve a **Settings** → **General**
 2. En **"Danger Zone"**, verifica que dice **"Change repository visibility"**
@@ -209,8 +209,8 @@ Si quieres probar el script de tests en tu propia computadora:
 
 ```bash
 # Clona tu repositorio
-git clone https://github.com/TU-USUARIO/practica-bash-data-engineering.git
-cd practica-bash-data-engineering
+git clone https://github.com/upy-next-gen/bash-filesystem.git
+cd bash-filesystem
 
 # Crea una carpeta de prueba
 mkdir test_profesor_1234
@@ -252,9 +252,9 @@ chmod +x test_estructura.sh
    git push
    ```
 
-### Los estudiantes no pueden hacer fork
+### Los estudiantes no pueden hacer push
 
-**Problema:** Los estudiantes no ven el botón "Fork"
+**Problema:** Los estudiantes no pueden pushear sus cambios
 
 **Solución:**
 1. El repositorio debe ser **Public**
@@ -348,7 +348,7 @@ En cada PR verás:
    - Compartes link con estudiantes
 
 2. **Estudiantes:**
-   - Hacen fork
+   - Clonan el repo
    - Crean su branch
    - Siguen INSTRUCCIONES.md
    - Hacen commit/push
