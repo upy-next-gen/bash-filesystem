@@ -9,7 +9,7 @@ Profesor: Max Pinelo
 
 ## 🎯 Objetivo
 
-Aprender a navegar y crear estructuras de directorios en bash, desarrollando un **"mapa mental"** del sistema de archivos mediante la construcción de un proyecto real de Data Engineering.
+Aprender a navegar y crear estructuras de directorios en bash, desarrollando un **"mapa mental"** del sistema de archivos mediante la construcción de la estructura de un proyecto real de Data Engineering.
 
 Al finalizar esta práctica dominarás los comandos esenciales de bash y entenderás cómo se organiza un proyecto profesional de datos.
 
@@ -58,7 +58,7 @@ git checkout -b estructura-TU-NOMBRE
 
 **IMPORTANTE:** Crea una carpeta con el formato: `iniciales_matricula`
 
-**Formato:** Primeras letras de tu nombre y apellido + underscore + matrícula
+**Formato:** Primera letra de tu nombre + apellido + underscore + matrícula
 
 **Ejemplos:**
 - Maximiliano Pinelo, matrícula 1809139 → `mpinelo_1809139/`
@@ -326,61 +326,3 @@ Después de completar esta práctica habrás aprendido:
 7. ✅ Comprender el flujo ETL en Data Engineering
 8. ✅ Trabajar con Git y GitHub para control de versiones
 9. ✅ Usar GitHub Actions para tests automáticos
-
----
-
-## 📅 Información de Entrega
-
-- **Fecha límite:** [FECHA POR DEFINIR]
-- **Valor:** 10 puntos
-- **Modalidad:** Individual
-- **Entrega:** Pull Request en GitHub con tests pasando ✅
-
----
-
-## 📞 Contacto
-
-- **Profesor:** Max Pinelo
-- **Slack:** #ayuda-bash
-- **Office Hours:** Martes y Jueves 2-3pm
-- **Email:** [EMAIL POR DEFINIR]
-
----
-
-## 🌟 Extras (Opcional)
-
-Si terminas temprano y quieres aprender más:
-
-1. **Explora otros comandos:**
-   ```bash
-   cat README.md          # Ver contenido de archivo
-   head -n 10 file.txt    # Primeras 10 líneas
-   tail -n 10 file.txt    # Últimas 10 líneas
-   grep "texto" file.txt  # Buscar texto en archivo
-   wc -l file.txt         # Contar líneas
-   ```
-
-2. **Crea aliases útiles:**
-   ```bash
-   alias ll='ls -lah'
-   alias ..='cd ..'
-   alias ...='cd ../..'
-   ```
-
-3. **Aprende sobre permisos:**
-   ```bash
-   ls -l                  # Ver permisos
-   chmod +x script.sh     # Hacer ejecutable
-   ```
-
----
-
-## 📜 Licencia
-
-Este material es para uso educativo en el curso de Introducción a la Ingeniería de Datos en UPY.
-
----
-
-**¡Buena suerte! 🚀**
-
-Si tienes dudas, pregunta en el canal de Slack o en Office Hours.
