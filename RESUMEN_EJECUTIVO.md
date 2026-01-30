@@ -49,14 +49,18 @@ git push -u origin main
 3. Selecciona: **"Allow all actions and reusable workflows"**
 4. Save
 
-### 3️⃣ (Opcional) Proteger Branch Main
+### 3️⃣ Proteger Branch Main (OBLIGATORIO)
 
-1. Settings → Branches
-2. Add branch protection rule
-3. Branch name pattern: `main`
+1. Settings → Branches → Add branch protection rule
+2. Branch name pattern: `main`
+3. ✅ Require a pull request before merging
+   - ✅ Require approvals: `2`
 4. ✅ Require status checks to pass before merging
-5. Busca y selecciona: **"test-estructura"**
+   - Busca y selecciona: **"test-estructura"**
+5. ✅ Do not allow bypassing the above settings
 6. Save
+
+**Resultado:** No se puede mergear sin tests pasando + aprobación del profesor
 
 ### 4️⃣ Compartir con Estudiantes
 

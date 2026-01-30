@@ -119,23 +119,39 @@ git push
 
 ---
 
-## 🛡️ Paso 3: Configurar Branch Protection (Opcional pero Recomendado)
+## 🛡️ Paso 3: Configurar Branch Protection (OBLIGATORIO)
 
-Esto evita que se acepten PRs con tests fallidos.
+Esto evita que se haga merge sin que pasen los tests y sin aprobación del profesor.
 
-### 3.1 Configurar Reglas
+### 3.1 Configurar Reglas de Protección
 
 1. Ve a **Settings** → **Branches**
 2. En **"Branch protection rules"**, haz clic en **"Add branch protection rule"**
 3. Configura:
    - **Branch name pattern:** `main`
    - ✅ **Require a pull request before merging**
+     - ✅ **Require approvals:** `2` (requiere aprobación del profesor)
+     - ✅ **Dismiss stale pull request approvals when new commits are pushed**
    - ✅ **Require status checks to pass before merging**
-     - Busca y selecciona: **"test-estructura"**
-   - ✅ **Require branches to be up to date before merging**
+     - Haz clic en el campo de búsqueda y selecciona: **"test-estructura"**
+     - ✅ **Require branches to be up to date before merging**
+   - ✅ **Do not allow bypassing the above settings** (ni admins pueden saltarse las reglas)
 4. Haz clic en **"Create"** o **"Save changes"**
 
-**Resultado:** Ahora los estudiantes NO podrán mergear sus PRs si los tests fallan.
+### 3.2 Agregar Reviewers por Defecto (Opcional)
+
+Para que automáticamente te asignen como reviewer en cada PR:
+
+1. Crea el archivo `.github/CODEOWNERS` en tu repo con:
+   ```
+   * @tu-usuario-github
+   ```
+2. Esto te asignará automáticamente como reviewer en todos los PRs
+
+**Resultado:**
+- ❌ No se puede hacer merge si los tests fallan
+- ❌ No se puede hacer merge sin aprobación del profesor
+- ✅ Solo el profesor puede aprobar y mergear
 
 ---
 
