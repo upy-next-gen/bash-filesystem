@@ -38,7 +38,7 @@ git init
 git add .
 git commit -m "Initial commit: Práctica de Bash"
 git branch -M main
-git remote add origin https://github.com/TU-USUARIO/practica-bash-data-engineering.git
+git remote add origin https://github.com/upy-next-gen/bash-filesystem.git
 git push -u origin main
 ```
 
@@ -49,24 +49,28 @@ git push -u origin main
 3. Selecciona: **"Allow all actions and reusable workflows"**
 4. Save
 
-### 3️⃣ (Opcional) Proteger Branch Main
+### 3️⃣ Proteger Branch Main (OBLIGATORIO)
 
-1. Settings → Branches
-2. Add branch protection rule
-3. Branch name pattern: `main`
+1. Settings → Branches → Add branch protection rule
+2. Branch name pattern: `main`
+3. ✅ Require a pull request before merging
+   - ✅ Require approvals: `2`
 4. ✅ Require status checks to pass before merging
-5. Busca y selecciona: **"test-estructura"**
+   - Busca y selecciona: **"test-estructura"**
+5. ✅ Do not allow bypassing the above settings
 6. Save
+
+**Resultado:** No se puede mergear sin tests pasando + aprobación del profesor
 
 ### 4️⃣ Compartir con Estudiantes
 
 Comparte este link:
 ```
-https://github.com/TU-USUARIO/practica-bash-data-engineering
+https://github.com/upy-next-gen/bash-filesystem
 ```
 
 Instrucciones para ellos:
-1. Hacer Fork
+1. Clonar el repo
 2. Seguir README.md
 3. Crear Pull Request cuando terminen
 
@@ -82,23 +86,21 @@ Cuando recibas PRs:
 ## 🎯 Flujo Completo del Estudiante
 
 ```
-1. FORK del repo
+1. CLONE del repo
    ↓
-2. CLONE a su computadora
+2. Crear BRANCH: estructura-nombre
    ↓
-3. Crear BRANCH: estructura-nombre
+3. Crear carpeta: iniciales_matricula/
    ↓
-4. Crear carpeta: iniciales_matricula/
+4. Seguir INSTRUCCIONES.md (51 pasos)
    ↓
-5. Seguir INSTRUCCIONES.md (51 pasos)
+5. git add, commit, push
    ↓
-6. git add, commit, push
+6. Crear PULL REQUEST
    ↓
-7. Crear PULL REQUEST
+7. TESTS AUTOMÁTICOS se ejecutan
    ↓
-8. TESTS AUTOMÁTICOS se ejecutan
-   ↓
-9. ✅ PASAN → Esperar revisión del profesor
+8. ✅ PASAN → Esperar revisión del profesor
    ❌ FALLAN → Corregir y push de nuevo (tests se repiten)
 ```
 
@@ -166,7 +168,7 @@ Cuando recibas PRs:
 1. Verifica que Actions esté habilitado (Settings → Actions)
 2. Verifica que `.github/workflows/test-estructura.yml` existe en el repo
 
-### Problema: Estudiante no puede hacer Fork
+### Problema: Estudiante no puede hacer push
 
 **Solución:**
 - El repo debe ser **Public** (Settings → General → Danger Zone)

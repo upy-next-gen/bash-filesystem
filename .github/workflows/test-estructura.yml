@@ -1,0 +1,46 @@
+name: Test Estructura de Directorios
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  test-estructura:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout codigo
+      uses: actions/checkout@v4
+
+    - name: Verificar estructura de directorios
+      run: |
+        echo "Ejecutando tests de estructura..."
+        chmod +x test_estructura.sh
+        ./test_estructura.sh
+
+    - name: Generar reporte de arbol
+      if: success()
+      run: |
+        echo "Generando reporte de estructura..."
+        sudo apt-get update -qq
+        sudo apt-get install -y tree
+
+        for folder in */data-engineering-project; do
+          if [ -d "$folder" ]; then
+            student_folder=$(dirname "$folder")
+            echo "=== Estructura de $student_folder ===" >> estructura-arbol.txt
+            tree -L 4 "$folder" >> estructura-arbol.txt
+            echo "" >> estructura-arbol.txt
+          fi
+        done
+
+    - name: Subir reporte como artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: estructura-arbol
+        path: estructura-arbol.txt
+        if-no-files-found: ignore

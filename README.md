@@ -37,14 +37,13 @@ tu-carpeta/
 
 ## 🚀 Instrucciones
 
-### Paso 1: Fork y Clona el Repositorio
+### Paso 1: Clona el Repositorio
 
-1. **Haz Fork** de este repositorio haciendo clic en el botón "Fork" arriba a la derecha
-2. **Clona tu fork** a tu computadora:
-   ```bash
-   git clone https://github.com/TU-USUARIO/practica-bash-data-engineering.git
-   cd practica-bash-data-engineering
-   ```
+Clona el repositorio a tu computadora:
+```bash
+git clone https://github.com/upy-next-gen/bash-filesystem.git
+cd bash-filesystem
+```
 
 ### Paso 2: Crea tu Branch
 
@@ -113,11 +112,10 @@ git push origin estructura-TU-NOMBRE
 
 ### Paso 7: Crea un Pull Request
 
-1. Ve a tu fork en GitHub
+1. Ve al repositorio en GitHub: https://github.com/upy-next-gen/bash-filesystem
 2. Verás un botón **"Compare & pull request"** - haz clic
-3. Asegúrate de que el PR vaya de `tu-fork/estructura-TU-NOMBRE` hacia `repo-original/main`
-4. En el título del PR escribe: `Práctica Bash - [Tu Nombre] - [Matrícula]`
-5. Haz clic en **"Create pull request"**
+3. En el título del PR escribe: `Práctica Bash - [Tu Nombre] - [Matrícula]`
+4. Haz clic en **"Create pull request"**
 
 ### Paso 8: Espera los Tests Automáticos ⚡
 
