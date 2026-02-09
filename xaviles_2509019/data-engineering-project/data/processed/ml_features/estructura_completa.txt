@@ -1,0 +1,3 @@
+.:
+estructura_completa.txt
+training_set.csv
