@@ -1,0 +1,11 @@
+.:
+README.md
+backup
+customers.csv
+estructura_completa.txt
+products.csv
+transactions.json
+
+./backup:
+customers_backup.csv
+transactions_backup.json
